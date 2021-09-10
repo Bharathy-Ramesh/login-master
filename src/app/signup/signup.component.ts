@@ -12,7 +12,7 @@ export class SignupComponent implements OnInit {
   constructor() {
     this.signform = new FormGroup({
       'name': new FormControl(),
-      'password': new FormControl(),
+      'password': new FormControl('', [Validators.required]),
       'cpassword': new FormControl(),
       'email': new FormControl('', [Validators.required, Validators.email])     
     });
@@ -43,6 +43,10 @@ export class SignupComponent implements OnInit {
       this.StrengthMsg = "Please strength your password";
       this.bool = false;
     }
+  }
+
+  get f(){
+    return this.signform.controls;
   }
 
 }

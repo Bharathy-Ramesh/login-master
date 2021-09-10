@@ -21,6 +21,9 @@
               <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
               </button> -->
             </mat-form-field>
+            <!-- <div *ngIf="f.password.touched && f.password.invalid" class="alert alert-danger">
+              <div *ngIf="f.password.errors.required">Password is required.</div>
+            </div> -->
             <span [ngStyle]="{'color':bool? 'green':'red'}">{{StrengthMsg}}</span>
         </div>
         <div class="example-container">
