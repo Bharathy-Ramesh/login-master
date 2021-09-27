@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
-import { ApisComponent } from './apis/apis.component';
 
 
 const routes: Routes = [
@@ -13,7 +12,8 @@ const routes: Routes = [
     path:'signup',component:SignupComponent
   },
   {
-    path: "apis", component:ApisComponent
+    path: "apis",
+    loadChildren : () => import('./apiservices/apiservices.module').then(m => m.ApiservicesModule)
   }
 ];
 
