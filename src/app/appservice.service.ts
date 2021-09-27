@@ -8,7 +8,7 @@ export class AppserviceService {
 
   constructor(private http: HttpClient) { }
   getdata(){
-    return this.http.post("http://universities.hipolabs.com/search?country=United+States", {title:'Angular post'});
+    return this.http.get("http://universities.hipolabs.com/search?country=United+States");
   }
 
 }
