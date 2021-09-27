@@ -25,6 +25,6 @@ export class SigninComponent implements OnInit {
   }; 
   Login(logindet:any){
     console.log(logindet);
+    this.router.navigate(['/apis']);
   }
-
 }

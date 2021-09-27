@@ -11,12 +11,15 @@ import { SignupComponent } from './signup/signup.component';
 import {MatCardModule} from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { ApisComponent } from './apis/apis.component';
+import { AppserviceService } from './appservice.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     SigninComponent,
-    SignupComponent
+    SignupComponent,
+    ApisComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatInputModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [AppserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
