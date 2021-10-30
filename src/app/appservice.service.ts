@@ -7,8 +7,12 @@ import { HttpClient } from '@angular/common/http';
 export class AppserviceService {
 
   constructor(private http: HttpClient) { }
+
   getdata(){
-    return this.http.get("http://universities.hipolabs.com/search?country=United+States");
+    return new Promise( (resolve,reject) => {
+      var apiresponse = this.http.get("http://universities.hipolabs.com/search?country=United+States")
+      console.log(apiresponse);
+    });
   }
 
 }
