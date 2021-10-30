@@ -10,9 +10,9 @@ export class ApisComponent implements OnInit {
   constructor(private apiserviceapp : AppserviceService) { }
 
   ngOnInit(): void {
-    this.apiserviceapp.getdata().subscribe(res => {
+    /*this.apiserviceapp.getdata().subscribe(res => {
       console.log(res);
-    });
+    });*/
   }
 
 }
